@@ -56,13 +56,20 @@
 							<ul>
 								<li>Semaine 1</li>
 									<ul>
-										<li style="font-size: 15px;">Lecture de la litérature</li>
+										<li style="font-size: 15px;">Lecture de la littérature</li>
+										<p>J'ai lu certains articles et notebooks au sujet des données débalancées.</p>
 										<li style="font-size: 15px;">Exploration des données</li>
+										<p>Les données sont très débalancées: 492 fraudes parmi 284 807 transactions. 28 sur 30 traits caractéristiques résultent d'une réduction de dimensionalité par analyse en composantes principales (PCA). J'ai normalisé les deux traits restants, ceci aide à la convergence des divers algorithmes d'optimisation selon la littérature.</p>
 										<li style="font-size: 15px;">Régression logistique</li>
+										<p>J'ai testé un premier modèle sans trop me préoccuper du déséquilibre présent dans les données. Comme attendu, bien que ce modèle a une faible erreur de classification, il n'a su détecter que 64% des fraudes (validation croisée).</p>
 										<li style="font-size: 15px;">Undersampling aléatoire</li>
+										<p>J'ai implémenté une régression logistique, une machine à vecteurs de support (avec noyaux gaussien et polynomial), un k-plus-proches-voisins ainsi qu'un forêt d'arbres aléatoires. La recherche des meilleures combinaisons d'hyperparamètres s'est faite par validation croisée et la métrique utilisée est le recall (au lieu de l'accuracy). J'ai tracé les courbes ROC et la régression logistique semble avoir les meilleurs résultats.</p>
 									</ul>
 
 								<li>Semaine 2</li>
+								<ul>
+									<li>Évaluation du undersampling aléatoire</li>
+								</ul>
 							</ul>
 						</div>
 					</div>
