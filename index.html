@@ -68,7 +68,14 @@
 
 								<li>Semaine 2</li>
 								<ul>
-									<li>Évaluation du undersampling aléatoire</li>
+									<li style="font-size: 15px;">Undersampling aléatoire</li>
+									<p>J'ai continuer l'évaluation de la méthode. J'ai ajouté des métriques d'évaluation.</p>
+									<li style="font-size: 15px;">Méthodologie</li>
+									<p>J'ai apporté des corrections méthodologiques importantes qui prévienne le surapprentissage lors de la validation croisée. Dans la phase de sélection du modèle des méthodes de resample, il est important de resample durant la validation croisée et de ne modifier que l'ensemble d'etraînement. Sinon on modifie forcément l'ensemble de validation et le prédicteur est optimisé pour des données resamplées. Le resample ne doit qu'agir sur l'entraînement pour que l'ensemble de validation corresponde à la vraie distribution.</p>
+									<p>J'ai notamment implémenter une méthode pour abstraire la validation croisée avec re-sampling. Il y en a une pour optimiser les hyperparamètres et une pour estimer le performance. C'est méthodes fonctionnent pour des classifieurs et méthodes de re-sampling 'quelconques'.</p>
+									<li style="font-size: 15px;">Undersampling par cluster et Smote</li>
+									<p>J'ai commencé à étudier ces deux méthodes. Il faudra appliquer les modifications méthodologiques et les évaluer en détail.</p>
+
 								</ul>
 							</ul>
 						</div>
