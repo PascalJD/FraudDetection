@@ -30,7 +30,7 @@
 							Les cas de fraudes ne représentant que 0.173% du nombre total de transactions, l’implémentation des modèles et les métriques de mesures de performance utilisées doivent être adaptées aux données fortement débalancées. Il est également souhaitable que la classification soit sensible, c’est-à-dire que le taux des faux positifs soit minimal, puisque l'institution bancaire ne veut pas déranger inutilement ses clients.</p>
 
 							<h3>Notebook</h3>
-							<p>Le notebook est disponible <a href="https://github.com/PascalJD/FraudDetection/blob/master/D%C3%A9tection%20de%20fraude.ipynb">ici</a>. Pour éxécuter le code, assurez-vous d'avoir un dossier nommé data qui contient les données à l'emplacement du notebook.</p>
+							<p>Une version récente, mais incomplète du notebook sur lequel je travaille est disponible <a href="https://github.com/PascalJD/FraudDetection/blob/master/D%C3%A9tection%20de%20fraude.ipynb">ici</a>. Pour éxécuter le code, assurez-vous d'avoir un dossier nommé data qui contient les données dans le même répertoire que le notebook.</p>
 
 							<h3>Plan</h3>
 							<p>Une ébauche de plan à laquelle je peux penser pour l'instant est la suivante. Il est fort probable que le plan évolue au fur et au mesure que le projet progresse.</p>
@@ -39,17 +39,26 @@
 								<ul>
 									<li style="font-size: 15px;">aléatoire</li>
 									<li style="font-size: 15px;">cluster</li>
-									<li style="font-size: 15px;">méthode d'ensemble</li>
+									<li style="font-size: 15px;">méthode d'ensemble ?</li>
 								</ul>
 								
 								<li>Oversampling</li>
 								<ul>
-									<li style="font-size: 15px;">aléatoire</li>
+									<li style="font-size: 15px;">SMOTE</li>
+									<li style="font-size: 15px;">ADASYN</li>
 								</ul>
 								
-								<li>SMOTE</li>
-								<li>Réseau de neurones</li>
+								<li>Réseaux de neurones</li>
+								<ul>
+									<li style="font-size: 15px;">Undersampling</li>
+									<li style="font-size: 15px;">Oversampling</li>
+								</ul>
+
 								<li>Prétraitement avancé</li>
+								<ul>
+									<li style="font-size: 15px;">Détection d'anomalies</li>
+									<li style="font-size: 15px;">Traits caractéristiques discriminatifs</li>
+								</ul>
 							</ul>
 
 							<h3>Rapports d'avancement</h3>
@@ -75,9 +84,18 @@
 									<p>J'ai notamment implémenter une méthode pour abstraire la validation croisée avec re-sampling. Il y en a une pour optimiser les hyperparamètres et une pour estimer le performance. C'est méthodes fonctionnent pour des classifieurs et méthodes de re-sampling 'quelconques'.</p>
 									<li style="font-size: 15px;">Undersampling par cluster et Smote</li>
 									<p>J'ai commencé à étudier ces deux méthodes. Il faudra appliquer les modifications méthodologiques et les évaluer en détail.</p>
-
 								</ul>
+
+								<li>Semaine 3</li>
+								<ul>
+									<li style="font-size: 15px;">Oversampling</li>
+									<p>J'ai implémenté des techniques qui ajoutent des exemples synthétiques de la classe minoritaire. SMOTE semble bien performer. Le désavantage des méthodes d'oversampling c'est qu'elles sont disposées au surapprentissage. En effet, on peut dupliquer les exemples aberrants ainsi que le bruit. C'est pourquoi il serait intéressant de refaire ces techniques, mais en ayant retiré les documents les plus atypiques.</p>
+									<li style="font-size: 15px;">Réseaux de neurones (undersampling aléatoire)</li>
+									<p>J'ai implémenté un premier réseau de neurones simple avec une seule couche cachée de 4 neurones et une sortie binaire sigmoïde. J'ai implémenté une méthode qui permet de faire un grid-search des hyperparamètres.</p>
+								</ul>
+
 							</ul>
+
 						</div>
 					</div>
 				</div>
