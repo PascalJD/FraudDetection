@@ -38,14 +38,14 @@
 								<li>Undersampling</li>
 								<ul>
 									<li style="font-size: 15px;">aléatoire</li>
-									<li style="font-size: 15px;">cluster</li>
-									<li style="font-size: 15px;">méthode d'ensemble ?</li>
+									<li style="font-size: 15px;">cluster centroid</li>
 								</ul>
 								
 								<li>Oversampling</li>
 								<ul>
 									<li style="font-size: 15px;">SMOTE</li>
 									<li style="font-size: 15px;">ADASYN</li>
+									<li style="font-size: 15px;">GANs</li>
 								</ul>
 
 								<li>Oversampling et undersampling</li>
@@ -58,6 +58,7 @@
 
 								<li>Prétraitement avancé</li>
 								<ul>
+									<li style="font-size: 15px;">Autoencodeur</li>
 									<li style="font-size: 15px;">Détection d'anomalies</li>
 									<li style="font-size: 15px;">Traits caractéristiques discriminatifs</li>
 								</ul>
@@ -100,6 +101,14 @@
 								<ul>
 									<li style="font-size: 15px;">Réseaux de neurones</li>
 									<p>J'ai continué à étudier les réseaux de neurones. J'ai ajouté une architecture de modèle avec plus de neurones et de couches cachées. J'ai aussi modifié la méthode pour faire la recherche exhaustive d'hyperparamètres; entre autre pour qu'elle puisse évaluer l'aire sous la courbe roc pour évaluer la performance. Pour l'instant, les courbes d'entraînement sont particulières.</p>
+								</ul>
+
+								<li>Semaine 5</li>
+								<ul>
+									<li style="font-size: 15px;">Oversampling et Undersampling</li>
+									<p>J'ai mélanger l'oversampling avec SMOTE et le undersampling aléatoire pour voir si on peut profiter le plus possible des avantages des deux méthodes.</p>
+									<li style="font-size: 15px;">Autoencodeurs</li>
+									<p>J'ai commencé le prétraitement avancé des données. Pour l'instant, je travaille sur les autoencodeurs. Ce sont des réseaux de neurones qui s'entraînent à reconstruire leurs entrées en minimisant l'erreur de reconstruction. Si on entraîne un auto-encodeur à apprendre la représentation des exemples non-frauduleux, alors on s'attend à ce que la représentation qu'il génère des exemples frauduleux soient différente de ceux non-frauduleux. Les autoencodeurs devraient aider la classification en accentuant les différences entre les cas de fraudes et les cas normaux.</p>
 								</ul>
 
 							</ul>
