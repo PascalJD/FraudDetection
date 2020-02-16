@@ -25,12 +25,12 @@
 							<hr/>
 
 							<h3>Résumé</h3>
-							<p>L'objectif du projet consiste en l'élaboration d'algorithmes de classification capables de détecter les transactions frauduleuses dans un dataset kaggle de transactions de cartes de crédit. Les données peuvent être trouvées <a href="https://www.kaggle.com/mlg-ulb/creditcardfraud">ici</a>.
+							<p>L'objectif du projet consiste en l'élaboration d'algorithmes de classification capables de détecter les transactions frauduleuses dans un dataset kaggle de transactions de cartes de crédit. Les données peuvent être trouvées <a href="https://www.kaggle.com/mlg-ulb/creditcardfraud" target="_blank">ici</a>.
 							<br><br>
 							Les cas de fraudes ne représentant que 0.173% du nombre total de transactions, l’implémentation des modèles et les métriques de mesures de performance utilisées doivent être adaptées aux données fortement débalancées. Il est également souhaitable que la classification soit sensible, c’est-à-dire que le taux des faux positifs soit minimal, puisque l'institution bancaire ne veut pas déranger inutilement ses clients.</p>
 
 							<h3>Notebook</h3>
-							<p>Une version récente, mais incomplète du notebook sur lequel je travaille est disponible <a href="https://github.com/PascalJD/FraudDetection/blob/master/D%C3%A9tection%20de%20fraude.ipynb">ici</a>. Pour éxécuter le code, assurez-vous d'avoir un dossier nommé data qui contient les données dans le même répertoire que le notebook.</p>
+							<p>Une version récente, mais incomplète du notebook sur lequel je travaille est disponible <a href="https://github.com/PascalJD/FraudDetection/blob/master/D%C3%A9tection%20de%20fraude.ipynb" target="_blank">ici</a>. Pour éxécuter le code, assurez-vous d'avoir un dossier nommé data qui contient les données dans le même répertoire que le notebook.</p>
 
 							<h3>Plan</h3>
 							<p>Une ébauche de plan à laquelle je peux penser pour l'instant est la suivante. Il est fort probable que le plan évolue au fur et au mesure que le projet progresse.</p>
@@ -108,7 +108,14 @@
 									<li style="font-size: 15px;">Oversampling et Undersampling</li>
 									<p>J'ai mélanger l'oversampling avec SMOTE et le undersampling aléatoire pour voir si on peut profiter le plus possible des avantages des deux méthodes.</p>
 									<li style="font-size: 15px;">Autoencodeurs</li>
-									<p>J'ai commencé le prétraitement avancé des données. Pour l'instant, je travaille sur les autoencodeurs. Ce sont des réseaux de neurones qui s'entraînent à reconstruire leurs entrées en minimisant l'erreur de reconstruction. Si on entraîne un auto-encodeur à apprendre la représentation des exemples non-frauduleux, alors on s'attend à ce que la représentation qu'il génère des exemples frauduleux soient différente de ceux non-frauduleux. Les autoencodeurs devraient aider la classification en accentuant les différences entre les cas de fraudes et les cas normaux.</p>
+									<p>J'ai commencé le prétraitement avancé des données. Pour l'instant, je travaille sur les autoencodeurs. Ce sont des réseaux de neurones qui s'entraînent à reconstruire leurs entrées en minimisant l'erreur de reconstruction. Si on entraîne un auto-encodeur à apprendre la représentation des exemples non-frauduleux, alors on s'attend à ce que la représentation qu'il génère des exemples frauduleux soit différente de ceux non-frauduleux. Les autoencodeurs devraient aider la classification en accentuant les différences entre les cas de fraudes et les cas normaux.</p>
+								</ul>
+								<li>Semaine 6</li>
+								<ul>
+									<li style="font-size: 15px;">Autoencodeurs</li>
+									<p>J’ai entraîné un autoencodeur à reconstruire des transactions non-frauduleuses pour que la représentation qu'il génère des exemples frauduleux soit différente, et ce, en espérant qu'il puisse renforcer les différences entre les cas normaux et les cas de fraudes. Toutefois, les graphiques des données projetées par t-SNE suggèrent que les regroupements de données aient plus de variabilité après qu'elles aient été transformées par l'autoencodeur, nuisant à la séparabilité des classes. En effet, les classifieurs ont des pertes de performance lorsqu'ils s'entraînent sur les données transformées par l'autoencodeur avec undersampling aléatoire.
+									<p>On pourrait faire un usage tout autre des autoencodeurs. Dans la perspective d'un apprentissage semi-suppervié, on peut utiliser l'auto-encodeur comme classifieur en utilisant l'erreur de reconstruction comme discriminant entre les des catégories de transactions.
+									</p>
 								</ul>
 
 							</ul>
