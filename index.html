@@ -117,7 +117,15 @@
 									<p>On pourrait faire un usage tout autre des autoencodeurs. Dans la perspective d'un apprentissage semi-suppervié, on peut utiliser l'auto-encodeur comme classifieur en utilisant l'erreur de reconstruction comme discriminant entre les des catégories de transactions.
 									</p>
 								</ul>
-
+								<li>Semaine 7</li>
+								<ul>
+									<li style="font-size: 15px;">GANs</li>
+									<p>Un GAN (Generative adversarial network) est un réseau de neurones génératif dans lequel deux réseaux sont en compétition. Le premier réseau est le générateur dont la tache est de générer des exemples qui borneront le second réseau, soit le discriminateur, qui lui est entraîné à distinguer les vrais exemples des faux exemples.</p>
+									<p>Dans notre cas, ils peuvent être utilisés afin de générer des transactions frauduleuses synthétiques pour augmenter, voire balancer le jeu de données. Cette méthode d'oversampling pourra peut-être donner lieu à des meilleurs résultats (recall, ROC, accuracy, etc.) que SMOTE et ADASYN pour certains classifieurs.
+									</p>
+									<p>Cette semaine, j'ai donc consulté la littérature en ligne au sujet des GANs pour m'informer sur leur fonctionnement. J'ai également implémenter un premier réseau adversériel génératif de base en suivant un tutoriel en ligne. Le réseau est capable de générer des exemples, mais pour l'instant ces exemples ne ressemblent pas suffisamment aux transactions frauduleuses pour aider à la classification.
+									</p>
+								</ul>
 							</ul>
 
 						</div>
