@@ -163,7 +163,14 @@
 									<p>
 										Si un auto-encodeur s'entraîne seulement sur les transactions normales, alors il va apprendre à les reproduire. De là on s'attend qu'il éprouve des difficultés à reproduire fidèlement les cas de fraudes puisque ses poids ont été appris en fonction des transactions normales. Pour cette raison, le coût de reconstruction devrait être élevé pour les fraudes de sorte qu'on peut décider qu'on classifie les exemples qui ont une erreur de reconstruction suppérieure à une certaint borne comme des fraudes.
 									</p>
-
+								<li>Semaine 13</li>
+									<li style="font-size: 15px;">Autoencodeurs variationnels</li>
+									<p>
+										J'ai obtenu des premiers résultats avec un autoencodeur variationnel pour la détection d'anomalie en apprentissage non-supervisé. Pour ce faire, j'ai implémenté une fonctionnalité qui calcule la probabilité de reconstruction de la sortie du réseaux en fonction de l'entrée et identifié un seuil critique sur cette probabilité qui permet de discriminer entre une transaction saine et une fraude.
+									</p>
+									<p>
+										Pour l'instant les résultats sont décents, mais moins bon que pour les autres méthodes. Par contre, comme on a accès aux classes, on peut toujours optimiser le modèle. C'est ce sur quoi je vais travailler dans la prochaine semaine. En particulier je vais tester différentes architectures de réseaux et différentes tailles pour la représentation latente.
+									</p>
 								</ul>
 								
 							</ul>
